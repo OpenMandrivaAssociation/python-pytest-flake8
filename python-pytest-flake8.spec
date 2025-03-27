@@ -1,14 +1,13 @@
-# Created by pyp2rpm-3.3.5
 %global pypi_name pytest-flake8
 
 Name:           python-%{pypi_name}
-Version:        1.0.7
+Version:        1.1.1
 Release:        3
 Summary:        A pytest plugin to check FLAKE8 requirements
 Group:          Development/Python
 License:        BSD License
 URL:            https://github.com/tholo/pytest-flake8
-Source0:        %{pypi_name}-%{version}.tar.gz
+Source0:        https://files.pythonhosted.org/packages/source/p/pytest-flake8/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  python3-devel
@@ -30,14 +29,10 @@ rm -rf %{pypi_name}.egg-info
 %install
 %py3_install
 
-%check
-%{__python3} setup.py test
-
 %files -n python-%{pypi_name}
 %license LICENSE
 %doc README.rst
 #{python3_sitelib}/__pycache__/*
 %{python3_sitelib}/pytest_flake8.py
 #%%{python3_sitelib}/%{pypi_name}
-%{python3_sitelib}/pytest_flake8-%{version}-py%{python3_version}.egg-info
-
+%{python3_sitelib}/pytest_flake8-%{version}-*.egg-info

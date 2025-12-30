@@ -2,7 +2,7 @@
 
 Name:           python-%{pypi_name}
 Version:        1.1.1
-Release:        4
+Release:        5
 Summary:        A pytest plugin to check FLAKE8 requirements
 Group:          Development/Python
 License:        BSD License

@@ -1,8 +1,8 @@
 %global pypi_name pytest-flake8
 
 Name:           python-%{pypi_name}
-Version:        1.1.1
-Release:        5
+Version:        1.3.0
+Release:        1
 Summary:        A pytest plugin to check FLAKE8 requirements
 Group:          Development/Python
 License:        BSD License
@@ -19,7 +19,7 @@ BuildRequires:  python3dist(setuptools)
 A pytest plugin for efficiently checking PEP8 compliance
 
 %prep
-%autosetup -n %{pypi_name}-%{version}
+%autosetup -n pytest_flake8-1.3.0
 # Remove bundled egg-info
 rm -rf %{pypi_name}.egg-info
 
